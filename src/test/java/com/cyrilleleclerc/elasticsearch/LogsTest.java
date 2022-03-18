@@ -136,7 +136,7 @@ public class LogsTest {
 
     @BeforeClass
     public static void beforeClass() throws Exception {
-        InputStream envAsStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("src/test/resources/.env");
+        InputStream envAsStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(".env");
         Preconditions.checkNotNull(envAsStream, ".env file not found in classpath");
         Properties env = new Properties();
         env.load(envAsStream);
